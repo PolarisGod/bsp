@@ -1,10 +1,10 @@
-import { forwardRef, Module } from "@nestjs/common";
+import { Module } from "@nestjs/common";
 import { UserModule } from "../user/user.module";
 import { SystemController } from "./system.controller";
 import { SystemService } from "./system.service";
 
 @Module({
-  imports: [ forwardRef(() => UserModule) ],
+  imports: [ UserModule ],
   providers: [ SystemService ],
   controllers: [ SystemController ],
 })

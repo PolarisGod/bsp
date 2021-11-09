@@ -1,8 +1,11 @@
-import { HttpServer, Injectable } from '@nestjs/common';
+import { HttpServer, Inject, Injectable } from '@nestjs/common';
+import { Connection } from 'typeorm';
 
 @Injectable()
 export class AppService {
   constructor (
+    @Inject('bsp_db')
+    private db: Connection,
     private httpServer: HttpServer,
   ) {}
 

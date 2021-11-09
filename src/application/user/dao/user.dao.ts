@@ -5,7 +5,7 @@ import { User } from "src/database/entity/user.entity";
 @Injectable()
 export class UserDao {
   constructor(
-    @Inject()
+    @Inject('bsp_db')
     private db: Connection,
   ) {}
 

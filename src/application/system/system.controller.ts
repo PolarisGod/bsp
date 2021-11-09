@@ -5,7 +5,6 @@ import { SystemService } from "./system.service";
 @Controller('system')
 export class SystemController {
   constructor(
-    @Inject()
     private systemService: SystemService,
   ) {}
 

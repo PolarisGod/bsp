@@ -1,10 +1,9 @@
-import { Inject, Injectable } from "@nestjs/common";
+import { Injectable } from "@nestjs/common";
 import { UserService } from "../user/user.service";
 
 @Injectable()
 export class SystemService {
   constructor(
-    @Inject()
     private userService: UserService,
   ) {}
 

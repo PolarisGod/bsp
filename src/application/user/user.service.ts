@@ -1,10 +1,9 @@
-import { Inject, Injectable } from "@nestjs/common";
+import { Injectable } from "@nestjs/common";
 import { UserDao } from "./dao/user.dao";
 
 @Injectable()
 export class UserService {
   constructor(
-    @Inject()
     private userDao: UserDao,
   ) {}
 

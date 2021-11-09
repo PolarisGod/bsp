@@ -5,7 +5,6 @@ import { UserService } from "./user.service";
 export class UserController {
 
   constructor(
-    @Inject()
     private userService: UserService,
     ) {}
 
