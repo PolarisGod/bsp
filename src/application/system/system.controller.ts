@@ -1,5 +1,6 @@
-import { Body, Controller, Inject, Post } from "@nestjs/common";
+import { Body, Controller, Post } from "@nestjs/common";
 import { responseFormat } from "src/untils/tools";
+import { Login } from "./system.dto";
 import { SystemService } from "./system.service";
 
 @Controller('system')
@@ -9,7 +10,7 @@ export class SystemController {
   ) {}
 
   @Post('login')
-  async login(@Body() body) {
+  async login(@Body() body: Login) {
     const result = await this.systemService.login(body);
     return responseFormat(result);
   }

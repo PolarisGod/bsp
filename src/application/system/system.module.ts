@@ -9,4 +9,10 @@ import { SystemService } from "./system.service";
   controllers: [ SystemController ],
 })
 
-export class SystemModule {}
+export class SystemModule {
+  constructor (
+    private readonly systemService: SystemService
+  ) {
+
+  }
+}

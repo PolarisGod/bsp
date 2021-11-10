@@ -16,9 +16,9 @@ export class SystemService {
   }
 
   async validateUser(body) {
-    const { userName, password } = body;
+    const { username, password } = body;
     let flag = true;
-    const userInfo = await this.userService.getPasswordByUser(userName);
+    const userInfo = await this.userService.getPasswordByUser(username);
     if (userInfo[0].password !== password) {
       flag = false;
     }
